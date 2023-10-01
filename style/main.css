@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600,700,800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400&display=swap");
+
 html {
 	box-sizing: border-box;
 }
@@ -8,52 +12,61 @@ html {
 }
 body {
 	height: 100%;
+	font-family: "Open Sans";
 }
-
 .wrapper {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
-.page {
-	flex: 1;
-}
-.container {
-}
+/* HEADER */
 .header {
-	background-color: #b9afaf;
+	background-color: #2c3948;
 	min-height: 100vh;
-	background-image: url(");
-
+	background-image: url("../img/hero/hero_background.jpg");
 	background-size: no-repeat;
-
 	background-position: center;
-
 	background-size: cover;
+}
+.header__container {
+	width: 1438px;
+	margin: 0 auto;
+	height: 100cqh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 70px;
+}
+.header__info h1 {
+	color: #fff;
+	text-align: center;
+	font-family: "Bebas Neue";
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 5.709px;
+}
+.header__info p {
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+.header__scrol {
+	color: #fff;
+	text-align: center;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 3.7px;
+	text-decoration: none;
+}
 
-	height: 400px;
-
-	width: 400px;
-}
-.hero {
-}
-
-.hero__background {
-}
-.hero__background img {
-}
-.hero__logo {
-}
-.hero__logo img {
-}
-.hero__info {
-}
-.hero__info h1 {
-}
-.hero__info p {
-}
-.hero__scrol {
-}
-
-.hero__background {
+.page {
 }
