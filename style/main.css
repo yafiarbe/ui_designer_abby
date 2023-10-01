@@ -1,0 +1,59 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.page {
+	flex: 1;
+}
+.container {
+}
+.header {
+	background-color: #b9afaf;
+	min-height: 100vh;
+	background-image: url(");
+
+	background-size: no-repeat;
+
+	background-position: center;
+
+	background-size: cover;
+
+	height: 400px;
+
+	width: 400px;
+}
+.hero {
+}
+
+.hero__background {
+}
+.hero__background img {
+}
+.hero__logo {
+}
+.hero__logo img {
+}
+.hero__info {
+}
+.hero__info h1 {
+}
+.hero__info p {
+}
+.hero__scrol {
+}
+
+.hero__background {
+}
