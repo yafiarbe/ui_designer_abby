@@ -471,8 +471,9 @@ body {
 	padding: 0 15px;
 	display: flex;
 	justify-content: space-between;
-	gap: 20px;
+	column-gap: 20px;
 	flex-wrap: wrap;
+	row-gap: 50px;
 }
 .footer__company {
 }
@@ -601,3 +602,22 @@ body {
 	line-height: normal;
 	letter-spacing: 0.846px;
 }
+
+
+@media (max-width: 700px){
+	.newsletter__container{
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 450px){
+	.newsletter__form{
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+	}
+}
+
+
+
