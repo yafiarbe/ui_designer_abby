@@ -93,6 +93,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 20px;
 }
 .menu__logo {
 	width: 80px;
@@ -165,6 +166,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	gap: 20px;
 	/* text-align: center; */
 }
 .story__text {
@@ -187,6 +189,7 @@ body {
 }
 .story__paragraph {
 	max-width: 405px;
+	min-width: 250px;
 	color: #48555b;
 	font-size: 13px;
 	font-style: normal;
@@ -198,7 +201,8 @@ body {
 	flex: 1;
 	display: flex;
 	justify-content: space-between;
-	column-gap: 20px;
+	gap: 20px;
+	flex-wrap: wrap;
 }
 .story__item {
 	background-color: #daf2fe;
@@ -206,6 +210,7 @@ body {
 	padding: 16px;
 	min-width: 140px;
 	background-repeat: no-repeat;
+	min-height: 160px;
 }
 .story__item--1 {
 	background-image: url("../img/story/wePlan.png");
@@ -247,4 +252,97 @@ body {
 	to {
 		scale: 1.2;
 	}
+}
+
+/* SERVICES */
+.services {
+}
+
+.services__container {
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.services__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding-bottom: 75px;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.services__title {
+	color: #48555b;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 2.306px;
+}
+.services__left-block {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: start;
+	justify-content: end;
+	gap: 20px;
+}
+.services__paragraph {
+	color: #48555b;
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 19px; /* 172.727% */
+	letter-spacing: 0.2px;
+	max-width: 405px;
+}
+.services__btn {
+	background: #00a4e5;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: normal;
+	text-decoration: none;
+	padding: 11px 29px;
+	min-width: 150px;
+}
+.services__items {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 28px;
+}
+.services__item {
+	flex: 1;
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	padding: 40px 20px 40px;
+}
+.services__item-icon {
+	margin-bottom: 25px;
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.services__item-icon--1 {
+	background-image: url("../img/services/01.svg");
+}
+.services__item-icon--2 {
+	background-image: url("../img/services/02.svg");
+}
+.services__item-icon--3 {
+	background-image: url("../img/services/03.svg");
+}
+.services__item-title {
+	color: #48555b;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 0.427px;
+	margin-bottom: 13px;
+}
+.services__item-paragraph {
+	color: #48555b;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.77;
+	letter-spacing: 0.188px;
 }
