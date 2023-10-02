@@ -605,10 +605,19 @@ body {
 	letter-spacing: 0.846px;
 }
 
+@media (max-width: 1280px) {
+	.touch {
+		padding-top: 90px;
+	}
+}
+
 @media (max-width: 700px) {
 	.newsletter__container {
 		flex-direction: column;
 		justify-content: center;
+	}
+	.touch {
+		padding-top: 90px;
 	}
 }
 
