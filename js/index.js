@@ -1,7 +1,38 @@
 'use strict'
 console.log("!---->The code has been uploaded!<----!");
 
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
+
+
+
+    function fixedMenu(menuId) {
+        const menuPositionY = document.querySelector(menuId).getBoundingClientRect().top;
+        console.log('menuPositionY');
+        console.log(menuPositionY);
+
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector(menuId).classList;
+            const activeClass = "menu__scrolled";
+
+            console.log('Положение Меню');
+            console.log(document.querySelector(menuId).getBoundingClientRect());
+            console.log(menuPositionY);
+
+            if (scrollY > menuPositionY) {
+                navbar.add(activeClass)
+            } else {
+                navbar.remove(activeClass)
+            }
+            // 674
+            console.log(scrollY);
+        })
+    };
+
+    fixedMenu('#menu');
 
 
 
@@ -42,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             hamburgerButton.classList.add('openAnimation');
             animationLast = "isOpen";
         }
-        
+
         function hamburgerClose() {
             hamburgerButton.classList.add('closeAnimation');
             animationLast = "isClose";
