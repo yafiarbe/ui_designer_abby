@@ -10,7 +10,7 @@
 
 	<body class="body">
 		<div class="wrapper">
-			<header class="header">
+			<header class="header" id="header">
 				<div class="header__container">
 					<a class="header__logo" aria-label="KONSTUCT">
 						<img src="img/hero/logo.svg" alt="logo" />
@@ -19,12 +19,12 @@
 						<h1>PARTNER WITH KONSTUCT</h1>
 						<p>An award-winning construction management firm</p>
 					</div>
-					<a href="!#" class="header__scrol">SCROLL DOWN</a>
+					<a href="#menu" class="header__scrol">SCROLL DOWN</a>
 				</div>
 			</header>
 
 			<main class="main">
-				<section class="menu">
+				<section class="menu" id="menu">
 					<div class="menu__container">
 						<a
 							class="menu__logo"
@@ -36,25 +36,33 @@
 						<nav class="menu__nav">
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a href="!#" class="menu__link">HOME</a>
+									<a href="#header" class="menu__link"
+										>HOME</a
+									>
 								</li>
 								<li class="menu__item">
-									<a href="!#" class="menu__link">ABOUT</a>
+									<a href="#story" class="menu__link"
+										>ABOUT</a
+									>
 								</li>
 								<li class="menu__item">
-									<a href="!#" class="menu__link">SERVICES</a>
+									<a href="#services" class="menu__link"
+										>SERVICES</a
+									>
 								</li>
 								<li class="menu__item">
-									<a href="!#" class="menu__link">WORK</a>
+									<a href="#touch" class="menu__link">WORK</a>
 								</li>
 								<li class="menu__item">
-									<a href="!#" class="menu__link">CONTACT</a>
+									<a href="#newsletter" class="menu__link"
+										>CONTACT</a
+									>
 								</li>
 							</ul>
 						</nav>
 					</div>
 				</section>
-				<section class="story">
+				<section class="story" id="story">
 					<div class="story__container">
 						<h2 class="story__main-title">OUR STORY</h2>
 						<div class="story__content">
@@ -94,7 +102,7 @@
 					</div>
 				</section>
 
-				<section class="services">
+				<section class="services" id="services">
 					<div class="services__container">
 						<div class="services__top">
 							<h2 class="services__title">OUR CAPABILITIES</h2>
@@ -157,7 +165,7 @@
 					</div>
 				</section>
 
-				<section class="touch">
+				<section class="touch" id="touch">
 					<div class="touch__container">
 						<h2 class="touch__title">
 							Want to build something amazing?
@@ -168,7 +176,7 @@
 					</div>
 				</section>
 
-				<section class="newsletter">
+				<section class="newsletter" id="newsletter">
 					<div class="newsletter__container">
 						<h2 class="newsletter__title">Newsletter Signup</h2>
 						<form
