@@ -10,13 +10,23 @@
 
 	<body class="body">
 		<div class="wrapper">
+			<div class="music_block">
+				<audio id="start-music" loop>
+					<source src="./music/track-min.mp3" type="audio/mpeg" />
+					<source src="./music/track-min.mp3" type="audio/mp3" />
+				</audio>
+				<div class="music_block__loader">
+					<span class="music_block__stroke music_is_pause"></span>
+					<span class="music_block__stroke music_is_pause"></span>
+					<span class="music_block__stroke music_is_pause"></span>
+					<span class="music_block__stroke music_is_pause"></span>
+					<span class="music_block__stroke music_is_pause"></span>
+					<span class="music_block__stroke music_is_pause"></span>
+					<span class="music_block__stroke music_is_pause"></span>
+				</div>
+			</div>
 			<header class="header" id="header">
 				<div class="header__container">
-					<audio
-						id="start-music"
-						src="./music/track.mp3"
-						loop
-					></audio>
 					<a class="header__logo" aria-label="KONSTUCT">
 						<img src="img/hero/logo.svg" alt="logo" />
 					</a>
@@ -24,7 +34,7 @@
 						<h1>PARTNER WITH KONSTUCT</h1>
 						<p>An award-winning construction management firm</p>
 					</div>
-					<a href="#menu" class="header__scrol">SCROLL DOWN</a>
+					<a href="#menu" class="header__scroll">SCROLL DOWN</a>
 				</div>
 			</header>
 
@@ -40,7 +50,7 @@
 						<nav class="menu__nav">
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a href="#header" class="menu__link"
+									<a href="#header" class="menu__link home"
 										>HOME</a
 									>
 								</li>
