@@ -1,44 +1,42 @@
 'use strict'
-console.log("Код загружен");
+console.log("!---->The code has been uploaded!<----!");
 
+document.addEventListener('DOMContentLoaded', function () {
 
-const musicBlockLoader = document.querySelector('.music_block__loader');
-console.log(musicBlockLoader);
-const musicBlockStroke = document.querySelectorAll('.music_block__stroke');
-console.log(musicBlockStroke);
-const music = document.querySelector('#start-music');
-console.log(music);
+    /* Music player on the site. */
+    function musicPlayer() {
+        const musicBlockLoader = document.querySelector('.music_block__loader');
+        const musicBlockStroke = document.querySelectorAll('.music_block__stroke');
+        const music = document.querySelector('#start-music');
 
-music.onloadeddata = function () {
-
-};
-
-musicBlockLoader.onclick = () => {
-    toggleMusic(music)
-}
-
-
-
-
-/* Запус музыки на сайте */
-function toggleMusic(soundTrack) {
-    checkMusic(soundTrack);
-    function checkMusic(currentMusic) {
-        if (check(currentMusic)) {
-            music.pause()
-            console.log('Is Paused');
-            for (const iterator of musicBlockStroke) {
-                iterator.classList.remove('music_is_play')
-            }
-        } else {
-            console.log('Is Play');
-            music.play();
-            for (const iterator of musicBlockStroke) {
-                iterator.classList.add('music_is_play')
-            }
+        musicBlockLoader.onclick = () => {
+            toggleMusic(music)
         }
-    };
-    function check(check) {
-        return !check.paused
-    };
-}
+
+        function toggleMusic(soundTrack) {
+            checkMusic(soundTrack);
+            function checkMusic(currentMusic) {
+                if (checker(currentMusic)) {
+                    music.pause()
+                    console.log('Is Paused');
+                    for (const iterator of musicBlockStroke) {
+                        iterator.classList.remove('music_is_play')
+                    }
+                } else {
+                    console.log('Is Play');
+                    music.play();
+                    for (const iterator of musicBlockStroke) {
+                        iterator.classList.add('music_is_play')
+                    }
+                }
+            };
+            function checker(check) {
+                return !check.paused
+            };
+        }
+    }
+
+    /* Launch functions. */
+    musicPlayer()
+
+});
