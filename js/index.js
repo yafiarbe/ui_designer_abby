@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function fixedMenu(menuBlock, topBlock) {
         const heightHero = document.querySelector(topBlock).getBoundingClientRect().height;
         const heightMenu = document.querySelector(menuBlock).getBoundingClientRect().height;
-        const mainBlock = document.querySelector('.main');
+        const mainBlock = document.querySelector('body');
         const navbar = document.querySelector(menuBlock).classList;
 
         window.addEventListener('scroll', function () {
@@ -38,17 +38,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const hamburgerButton = document.querySelector('#hamburger-btn');
         const hamburgerLines = document.querySelectorAll('.hamburger__line')
         let animationLast = '';
-        console.log(hamburgerLines);
-
 
         // EVENTS
         hamburgerLines[0].addEventListener("animationstart", function () {
-            console.log('START ANIMATION');
             hamburgerButton.classList.add('_animated')
         });
 
         hamburgerLines[0].addEventListener("animationend", function () {
-            console.log('END ANIMATION');
             hamburgerButton.classList.remove('_animated')
             hamburgerButton.classList.remove('closeAnimation')
             hamburgerButton.classList.remove('openAnimation')
@@ -58,10 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
         hamburgerButton.onclick = () => {
 
             if (hamburgerButton.classList.contains('_open') && !hamburgerButton.classList.contains('_animated')) {
-                console.log('CLOSED');
                 hamburgerClose();
             } else if (!hamburgerButton.classList.contains('_open') && !hamburgerButton.classList.contains('_animated')) {
-                console.log('OPENED');
                 hamburgerOpen();
             }
         }
@@ -75,22 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
             hamburgerButton.classList.add('closeAnimation');
             animationLast = "isClose";
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     };
     /* Music player on the site. */
     function musicPlayer() {

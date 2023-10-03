@@ -96,17 +96,20 @@ body {
 	width: 100%;
 	z-index: 10;
 	background-color: #fff;
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	transition: box-shadow 0.2s ease-in-out;
 }
 
 .menu__scrolled {
 	position: fixed;
 	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
 	-webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
-	transition: box-shadow 0.4s ease-in-out, top 0.4s;
+	transition: box-shadow 0.3s ease-in-out;
+	/* transition: box-shadow 0.4s ease-in-out, top 0.4s; */
 }
 
 .menu__container {
