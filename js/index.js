@@ -8,7 +8,7 @@ console.log("!---->The code has been uploaded!<----!");
 document.addEventListener('DOMContentLoaded', function () {
 
 
-
+    /* FIXED MENU */
     function fixedMenu(menuBlock, topBlock) {
         const heightHero = document.querySelector(topBlock).getBoundingClientRect().height;
         const heightMenu = document.querySelector(menuBlock).getBoundingClientRect().height;
