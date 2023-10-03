@@ -46,7 +46,7 @@ body {
 	padding-bottom: 70px;
 }
 
-.hero__info h1{
+.hero__info h1 {
 	color: #fff;
 	text-align: center;
 	font-family: "Bebas Neue";
@@ -55,9 +55,8 @@ body {
 	font-weight: 400;
 	line-height: normal;
 	letter-spacing: 5.709px;
-	
 }
-.hero__info p{
+.hero__info p {
 	color: #fff;
 	text-align: center;
 	font-size: 16px;
@@ -90,7 +89,6 @@ body {
 }
 
 .main {
-	
 }
 
 /* MAIN MENU */

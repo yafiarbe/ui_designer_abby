@@ -10,42 +10,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function fixedMenu(menuBlock, topBlock) {
-        const menuPositionY = document.querySelector(menuBlock).getBoundingClientRect().top;
-        console.log('menuPositionY');
-        console.log(menuPositionY);
-
         const heightHero = document.querySelector(topBlock).getBoundingClientRect().height;
-        console.log('heightHero');
-        console.log(heightHero);
         const heightMenu = document.querySelector(menuBlock).getBoundingClientRect().height;
-
-
-
+        const mainBlock = document.querySelector('.main');
+        const navbar = document.querySelector(menuBlock).classList;
 
         window.addEventListener('scroll', function () {
-            const navbar = document.querySelector(menuBlock).classList;
             const activeClass = "menu__scrolled";
-
-
-            console.log('Положение Меню');
-            console.log(document.querySelector(menuBlock).getBoundingClientRect());
-            console.log(menuPositionY);
 
             if (scrollY > heightHero) {
                 navbar.add(activeClass)
-
-                const mainBlock = document.querySelector('.main');
                 mainBlock.style.paddingTop = heightMenu + 'px';
 
-                console.log('mainBlock');
-                console.log(mainBlock);
             } else {
-                const mainBlock = document.querySelector('.main');
                 navbar.remove(activeClass)
                 mainBlock.removeAttribute("style")
             }
-            // 674
-            console.log(scrollY);
         })
     };
 
