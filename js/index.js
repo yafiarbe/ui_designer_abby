@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const heightHero = document.querySelector(topBlock).getBoundingClientRect().height;
         console.log('heightHero');
         console.log(heightHero);
+        const heightMenu = document.querySelector(menuBlock).getBoundingClientRect().height;
 
 
 
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 navbar.add(activeClass)
 
                 const mainBlock = document.querySelector('.main');
-                mainBlock.style.paddingTop = 66 + 'px';
+                mainBlock.style.paddingTop = heightMenu + 'px';
 
                 console.log('mainBlock');
                 console.log(mainBlock);
