@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const hamburgerButton = document.querySelector('#hamburger-btn');
         const hamburgerLines = document.querySelectorAll('.hamburger__line');
         let animationLast = '';
+        const pageBody = document.querySelector('.body');
 
         // EVENTS
         hamburgerLines[0].addEventListener("animationstart", function () {
@@ -73,11 +74,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function hamburgerOpen() {
             hamburgerButton.classList.add('openAnimation');
+            pageBody.classList.add('overflow_lock')
             animationLast = "isOpen";
         };
-
+        
         function hamburgerClose() {
             hamburgerButton.classList.add('closeAnimation');
+            pageBody.classList.remove('overflow_lock')
             animationLast = "isClose";
         };
     };
