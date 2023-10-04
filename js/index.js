@@ -7,8 +7,7 @@ console.log("!---->The code has been uploaded!<----!");
 
 document.addEventListener('DOMContentLoaded', function () {
 
-
-    /* FIXED MENU */
+    /* ============== FIXED MENU ============== */
     function fixedMenu(menuBlock, topBlock) {
         const heightHero = document.querySelector(topBlock).getBoundingClientRect().height;
         const heightMenu = document.querySelector(menuBlock).getBoundingClientRect().height;
@@ -19,58 +18,75 @@ document.addEventListener('DOMContentLoaded', function () {
             const activeClass = "menu__scrolled";
 
             if (scrollY > heightHero) {
-                navbar.add(activeClass)
+                navbar.add(activeClass);
                 mainBlock.style.paddingTop = heightMenu + 'px';
 
             } else {
-                navbar.remove(activeClass)
-                mainBlock.removeAttribute("style")
-            }
-        })
+                navbar.remove(activeClass);
+                mainBlock.removeAttribute("style");
+            };
+        });
     };
 
     fixedMenu('#menu', '.hero');
 
 
 
-    /* HUMBURGER MENU */
+    /* ============== HUMBURGER MENU ============== */
     function hamburger() {
         const hamburgerButton = document.querySelector('#hamburger-btn');
-        const hamburgerLines = document.querySelectorAll('.hamburger__line')
+        const hamburgerLines = document.querySelectorAll('.hamburger__line');
         let animationLast = '';
 
         // EVENTS
         hamburgerLines[0].addEventListener("animationstart", function () {
-            hamburgerButton.classList.add('_animated')
+            hamburgerButton.classList.add('_animated');
         });
 
         hamburgerLines[0].addEventListener("animationend", function () {
-            hamburgerButton.classList.remove('_animated')
-            hamburgerButton.classList.remove('closeAnimation')
-            hamburgerButton.classList.remove('openAnimation')
+            hamburgerButton.classList.remove('_animated');
+            hamburgerButton.classList.remove('closeAnimation');
+            hamburgerButton.classList.remove('openAnimation');
             hamburgerButton.classList.toggle('_open');
         });
 
         hamburgerButton.onclick = () => {
-
+            scrollFixTopScroll();
             if (hamburgerButton.classList.contains('_open') && !hamburgerButton.classList.contains('_animated')) {
                 hamburgerClose();
             } else if (!hamburgerButton.classList.contains('_open') && !hamburgerButton.classList.contains('_animated')) {
                 hamburgerOpen();
-            }
-        }
+            };
+        };
+
+        function scrollFixTopScroll() {
+            const heightHero = document.querySelector('.hero').getBoundingClientRect().height;
+
+            if (scrollY < heightHero && !hamburgerButton.classList.contains('_open')) {
+                window.scrollTo({
+                    top: heightHero,
+                    // behavior: "smooth",
+                });
+            };
+        };
+
 
         function hamburgerOpen() {
             hamburgerButton.classList.add('openAnimation');
             animationLast = "isOpen";
-        }
+        };
 
         function hamburgerClose() {
             hamburgerButton.classList.add('closeAnimation');
             animationLast = "isClose";
-        }
+        };
     };
-    /* Music player on the site. */
+
+    hamburger();
+
+
+
+    /* ============== Music player on the site. ============== */
     function musicPlayer() {
         const musicBlockLoader = document.querySelector('.music_block__loader');
         const musicBlockStroke = document.querySelectorAll('.music_block__stroke');
@@ -105,53 +121,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 return !check.paused
             };
         }
-    }
+    };
 
-    /* Launch functions. */
-    hamburger()
-    musicPlayer()
-
-
-
-
-
-
-
-
-
+    musicPlayer();
 
 });
-
-
-
-
-
-
-/* 
-let hamburgerOpened = hamburgerButton.classList.contains('openAnimation');
-            hamburgerButton.classList.remove('closeAnimation');
-            if (!hamburgerOpened) {
-                hamburgerButton.classList.add('openAnimation');
-            } else {
-                hamburgerButton.classList.remove('openAnimation');
-            }
-
-
-            for (let i = 0; i < hamburgerLines.length; i++) {
-                const spanLine = hamburgerLines[i];
-                spanLine.addEventListener("animationend", function (event) {
-                    console.log(this);
-                    if (this.classList.contains('hamburger__line--1')) {
-                        console.log('1');
-                        // this.style.transform = "translateY(8px) rotate(45deg)";
-                    } else if (this.classList.contains('hamburger__line--2')) {
-                        console.log('2');
-                        // this.style.opacity = 0;
-                    } else if (this.classList.contains('hamburger__line--3')) {
-                        console.log('3');
-                        // this.style.transform = "translateY(-8px) rotate(-45deg)";
-                    }
-
-                    hamburgerButton.classList.add('_open')
-                })
-            } */
