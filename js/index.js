@@ -101,12 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     };
 
-
-
-
-
-
-
     hamburger();
 
 
