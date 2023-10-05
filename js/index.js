@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const hamburgerLines = document.querySelectorAll('.hamburger__line');
         let animationLast = '';
         const pageBody = document.querySelector('.body');
+        const mainMenuNav = document.querySelector('.menu__nav');
 
         // EVENTS
         hamburgerLines[0].addEventListener("animationstart", function () {
@@ -66,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (scrollY < heightHero && !hamburgerButton.classList.contains('_open')) {
                 window.scrollTo({
                     top: heightHero,
-                    // behavior: "smooth",
+                    behavior: "smooth",
                 });
             };
         };
@@ -74,16 +75,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function hamburgerOpen() {
             hamburgerButton.classList.add('openAnimation');
-            pageBody.classList.add('overflow_lock')
+            pageBody.classList.add('_overflow_hidden')
             animationLast = "isOpen";
+            mainMenuNav.classList.add('_top-0')
         };
-        
+
         function hamburgerClose() {
             hamburgerButton.classList.add('closeAnimation');
-            pageBody.classList.remove('overflow_lock')
+            pageBody.classList.remove('_overflow_hidden')
             animationLast = "isClose";
+            mainMenuNav.classList.remove('_top-0')
         };
+
+        function onMenuLinkClick(e) {
+            const mainMenuLinks = document.querySelectorAll('.menu__link');
+
+            for (const iterator of mainMenuLinks) {
+                iterator.addEventListener('click', function () {
+                    hamburgerClose()
+                })
+            }
+        }
+
+        onMenuLinkClick()
+
     };
+
+
+
+
+
+
 
     hamburger();
 
